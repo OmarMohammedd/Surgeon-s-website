@@ -1,3 +1,6 @@
+.template-btn:hover {
+  opacity: 1;
+}
 .fontsize {
   font-size: 15px !important;
 }
