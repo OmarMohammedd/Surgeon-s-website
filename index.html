@@ -25,6 +25,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+
+
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <script type="text/javascript">
+    emailjs.init('MpI-qwrd62zYu1Fbr')
+  </script>
+  
+  <script src="./assets/js/email.js"></script>
+
 </head>
 
 <body>
@@ -218,6 +232,24 @@
       </form>
     </div>
   </section>
+
+
+  <script>
+    function validateAndSend(event) {
+      event.preventDefault();
+  
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const location = document.getElementById('location').value.trim();
+  
+      if (name === '' || phone === '' || location === '') {
+        alert('يرجى ملء جميع الحقول قبل الإرسال');
+      } else {
+        sendMail();
+      }
+    }
+  </script>
+
   <!-- Patient Area Starts -->
 
 
