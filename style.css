@@ -44,7 +44,7 @@
 
 @media (max-width:460px) {
   .banner-area {
-    text-align: center;
+    text-align: right;
   }
   .banner-area h4 {
     margin-top: -5rem !important;
@@ -398,17 +398,17 @@ textarea::placeholder {
 
 
 .banner-area {
-  display: flex; /* استخدام Flexbox */
-  align-items: center; /* محاذاة العناصر عموديًا في المنتصف */
-  justify-content: center; /* محاذاة العناصر أفقيًا في المنتصف */
-  padding: 400px 0 350px; /* الحشو كما هو */
-  height: calc(100vh - 70px) !important; /* ارتفاع الشاشة الكامل */
-  background-color: #b0b0b0; /* لون الخلفية */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 400px 0 350px; 
+  height: calc(100vh - 70px) !important; 
+  background-color: #b0b0b0; 
   background-image: url("https://img.freepik.com/free-photo/close-up-stethoscope-blank-blue-background_23-2147874869.jpg?t=st=1727800591~exp=1727804191~hmac=818bf60426261dc907ef49889740922b501f81af17ed980155dfd47ab3da8ebe&w=996");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  position: relative; /* تأكد من أن القسم يحمل الخلفية */
+  position: relative; 
 }
 
 
