@@ -435,7 +435,7 @@ textarea::placeholder {
 
 .logo {
   /* height: 50px; */
-  width: 80px;
+  width: 84px;
 }
 .logo img {
   max-height: 100%;
@@ -444,6 +444,9 @@ textarea::placeholder {
 .banner-area{
     height: 100vh;
   background-image:url("./assets/images/slider-bg-1.jpg");
+}
+.navbar-toggler {
+  font-size: 25px;
 }
 
 
