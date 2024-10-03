@@ -219,15 +219,65 @@
       <!-- Patient Area Starts -->
   <section id="inquiries" class="inquiries" style="margin-top: -3.5rem;">
     <div class="container">
-      <h2>أرسل استفساراتك</h2>
+      <h2>احجز الآن</h2>
 
       <form class="inputss">
         <input type="text" id="name" name="name" placeholder="الاسم">
         <input type="number" id="phone" name="phone" placeholder="رقم الهاتف">
-        <textarea placeholder="الاستفسار" type="text" name="location" id="location" style="height: 100px"></textarea>
+        <!-- <textarea placeholder="الاستفسار" type="text" name="location" id="location" style="height: 100px"></textarea> -->
+
+        <div class="parent_select">
+          <div>
+              <label for="clinic">اختر العيادة:</label>
+              <select id="clinic" name="clinic" required onchange="updateAppointments()">
+                  <option value="">اختر عيادة</option>
+                  <option value="مصر الجديدة">عيادة مصر الجديدة</option>
+                  <option value="الدقي">عيادة الدقي</option>
+              </select>
+          </div>
+      
+          <div>
+              <label for="appointment">اختر المعاد:</label>
+              <select id="appointment" name="appointment" required>
+                  <option value="">اختر معاد</option>
+                  <!-- سيتم ملء الخيارات هنا باستخدام JavaScript -->
+              </select>
+          </div>
+      </div>
+      
+      <script>
+      function updateAppointments() {
+          const clinicSelect = document.getElementById('clinic');
+          const appointmentSelect = document.getElementById('appointment');
+          const selectedClinic = clinicSelect.value;
+      
+          appointmentSelect.innerHTML = '<option value="">اختر معاد</option>';
+      
+          let appointments = [];
+      
+          if (selectedClinic === 'مصر الجديدة') {
+              appointments = [
+                  { value: "الإثنين: 6-8 م", text: "يوم الاثنين من 6-8 م" },
+                  { value: "الخميس: 8-10 م", text: "يوم الخميس من 8-10 م" }
+              ];
+          } else if (selectedClinic === 'الدقي') {
+              appointments = [
+                  { value: "الأحد: 8-10 م", text: "يوم الأحد من 8-10 م" },
+                  { value: "الثلاثاء: 9-10 م", text: "يوم الثلاثاء من 9-10 م" }
+              ];
+          }
+      
+          appointments.forEach(appointment => {
+              const option = document.createElement('option');
+              option.value = appointment.value;
+              option.textContent = appointment.text;
+              appointmentSelect.appendChild(option);
+          });
+      }
+      </script>
+      
 
         <button class="template-btn" type="submit" onclick="validateAndSend(event)">ارسال الان</button>
-
 
       </form>
     </div>
@@ -240,9 +290,11 @@
   
       const name = document.getElementById('name').value.trim();
       const phone = document.getElementById('phone').value.trim();
-      const location = document.getElementById('location').value.trim();
+      const clinic = document.getElementById('clinic').value.trim();
+      const appointment = document.getElementById('appointment').value.trim();
+
   
-      if (name === '' || phone === '' || location === '') {
+    if (name === '' || phone === '' || clinic === '' || appointment === '') {
         alert('يرجى ملء جميع الحقول قبل الإرسال');
       } else {
         sendMail();
@@ -326,7 +378,7 @@
 
   <!-- Hotline Area Starts -->
   <section id="hotline-are" class="hotline-area text-center section-padding" dir="rtl"
-   style="margin-bottom: -4rem; padding-top: -3rem;margin-top: 3.3rem;">
+   style="margin-bottom: 4.7rem; padding-top: -3rem;margin-top: 3.3rem;">
     <div class="container">
 
       <div class="address">
@@ -373,14 +425,6 @@
     </div>
   </section>
   <!-- Hotline Area End -->
-
-  <!-- News Area Starts -->
-  <section class="news-area section-padding">
-    <div class="container">
-          
-    </div>
-  </section>
-  <!-- News Area Starts -->
 
   <!-- Footer Area Starts -->
   <footer class="footer_section">
