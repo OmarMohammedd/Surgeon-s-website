@@ -588,3 +588,21 @@ select {
 .form-select,.nice-select {
   display: none;
 }
+
+
+/* icons */
+.icons {
+  position: fixed;
+  bottom: 50px;
+  left: 10px;
+  z-index: 99999999999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+.icons i {
+  color: #0f3552 ;
+  font-size: 32px;
+  cursor: pointer;
+} 
