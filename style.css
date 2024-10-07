@@ -593,7 +593,7 @@ select {
 /* icons */
 .icons {
   position: fixed;
-  bottom: 80px;
+  bottom: 100px;
   left: 10px;
   z-index: 99999999999;
   display: flex;
