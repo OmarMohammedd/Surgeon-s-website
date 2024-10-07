@@ -593,7 +593,7 @@ select {
 /* icons */
 .icons {
   position: fixed;
-  bottom: 50px;
+  bottom: 80px;
   left: 10px;
   z-index: 99999999999;
   display: flex;
@@ -602,7 +602,27 @@ select {
   align-items: center;
 }
 .icons i {
-  color: #0f3552 ;
   font-size: 32px;
   cursor: pointer;
 } 
+
+
+.icon1 {
+  color: #25D366;
+}
+.icon2 {
+  color: #4267B2;
+}
+.icon3 {
+  color: #FF0000;
+}
+
+.icon1:hover {
+  color: #25D366;
+}
+.icon2:hover {
+  color: #4267B2;
+}
+.icon3:hover {
+  color: #FF0000;
+}
